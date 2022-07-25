@@ -30,11 +30,11 @@ jobs:
         run: sudo apt update
 
       # Runs a set of commands using the runners shell
-      - name: Install wget
-        run: sudo apt install wget
+      - name: Install curl
+        run: sudo apt install curl
         
       - name: Download a latest datebase ClamAV
-        run: wget https://database.clamav.net/main.cvd
+        run: curl https://database.clamav.net/main.cvd -o main.cvd
         
       - name: upload build
         run: pwd
